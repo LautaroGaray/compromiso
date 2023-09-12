@@ -32,14 +32,14 @@ app.post('/PostMail', (req, res) => {
             service: "Gmail",
             port:587,
             auth: {
-                user: "garaylautaroe10@gmail.com;naty_93_09@hotmail.com",
+                user: "garaylautaroe10@gmail.com",
                 pass: "enefofochocwjpgg",
             },
         });
 
         const mensaje = {
             from: "garaylautaroe10@gmail.com",
-            to: "lautagaray_10@hotmail.com",
+            to: "lautagaray_10@hotmail.com;naty_93_09@hotmail.com",
             subject: "Confirmación de Asistencia",
             text: `¡Hola soy ${nombre}!\n\nConfirmo mi asistencia para vuestro compromiso el día 7 de octubre a las 20:00 pm.\n\n¡Nos preparamos!`,
         };
