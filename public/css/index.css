@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+    background-image: url('../img/wg.avif');
+    background-size: contain;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.bubble {
+    width: 20px;
+    height: 20px;
+    background-color:#ff0080;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.6;
+}
+
+/* Nueva animación para las burbujas */
+@keyframes moveBubble {
+    0% {
+        transform: translateY(90vh); /* Comienza desde el fondo de la pantalla */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-20px); /* Desaparece en la parte superior */
+        opacity: 0;
+    }
+}
+
+.bubble {
+    /* ... otros estilos ... */
+    animation: moveBubble 2s linear forwards; /* Duración de la animación de 2 segundos */
+}
+
